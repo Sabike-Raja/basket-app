@@ -32,6 +32,7 @@ const Home = ({
         mapData.count += 1;
         isProductUpdated = true;
       }
+      return null
     });
     if (!isProductUpdated) {
       newData.push({ ...selectedData, count: 1 });
@@ -47,6 +48,7 @@ const Home = ({
       if (mapData.name === selectedData.name) {
         mapData.count -= 1;
       }
+      return null
     });
     newData = newData.filter((filterData) => filterData.count > 0);
     updateBasketCart(newData);
