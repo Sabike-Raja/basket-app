@@ -1,0 +1,26 @@
+html,
+body {
+  height: 100%;
+}
+
+/* placeholder styles go header */
+::-webkit-input-placeholder {
+  /* Edge */
+  color: black;
+  font-size: 12px;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: black;
+  font-size: 12px;
+}
+
+::placeholder {
+  color: black;
+  font-size: 12px;
+}
+
+.w-60 {
+  width: 60% !important;
+}
