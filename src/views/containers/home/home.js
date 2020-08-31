@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form, Container } from "react-bootstrap";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import { Link } from 'react-router-dom';
 
 import BannerImage from "../../../assets/images/grocery-shopping.png";
 import { Products } from "../../components/product/product";
@@ -81,6 +82,7 @@ const Home = ({
       </div>
       <div>
         <Container className="w-75 p-0">
+          <Link to={'/blog'}> Link to editor </Link>
           <div className="d-flex justify-content-center">
             <Products
               type="add"

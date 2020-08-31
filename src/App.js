@@ -6,13 +6,13 @@ import Editor from "./views/containers/editor/editor";
 
 import "./App.css";
 import "./assets/style/general.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
-      <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/blog" component={Editor} />
       </Switch>
     </BrowserRouter>
