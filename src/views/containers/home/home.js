@@ -3,6 +3,7 @@ import { Form, Container } from "react-bootstrap";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 import BannerImage from "../../../assets/images/grocery-shopping.png";
 import { Products } from "../../components/product/product";
@@ -68,6 +69,11 @@ const Home = ({
 
   return (
     <div className="mb-5">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Editor</title>
+        <link rel="canonical" href="https://parva-backend-media-dev.s3.amazonaws.com/post_banners/tech.jpeg" />
+      </Helmet>
       <div className="w-100">
         <img className="banner-image" src={BannerImage} alt="banner_image" />
       </div>
