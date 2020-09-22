@@ -26,11 +26,17 @@ const Home = ({
   const { homePageProducts } = Constant;
 
   useEffect(() => {
-    setTimeout(() => {
-      document.getElementsByTagName("META")[5].content =
-        "https://parva-backend-media-dev.s3.amazonaws.com/post_banners/tech.jpeg";
-    }, 2000);
-  }, [])
+    fetch("https://run.mocky.io/v3/3f358af0-5e1e-4f57-bc0f-5aa204571cb0")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        document.getElementsByTagName("META")[5].content = data.url;
+      });
+    // setTimeout(() => {
+    //   document.getElementsByTagName("META")[5].content =
+    //     "https://parva-backend-media-dev.s3.amazonaws.com/post_banners/tech.jpeg";
+    // }, 2000);
+  }, []);
 
   // add product to basket
 
