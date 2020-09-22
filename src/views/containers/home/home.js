@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Form, Container } from "react-bootstrap";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { Link } from 'react-router-dom';
-import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+// import { Helmet } from "react-helmet";
+import MetaTags from "react-meta-tags";
 
 import BannerImage from "../../../assets/images/grocery-shopping.png";
 import { Products } from "../../components/product/product";
@@ -34,7 +35,7 @@ const Home = ({
         mapData.count += 1;
         isProductUpdated = true;
       }
-      return null
+      return null;
     });
     if (!isProductUpdated) {
       newData.push({ ...selectedData, count: 1 });
@@ -50,7 +51,7 @@ const Home = ({
       if (mapData.name === selectedData.name) {
         mapData.count -= 1;
       }
-      return null
+      return null;
     });
     newData = newData.filter((filterData) => filterData.count > 0);
     updateBasketCart(newData);
@@ -69,11 +70,20 @@ const Home = ({
 
   return (
     <div className="mb-5">
-      <Helmet>
+      <MetaTags>
+        <title>Basket</title>
+        <meta name="description" content="You can buy your groceries here" />
+        <meta property="og:title" content="My editor" />
+        <meta property="og:image" content="https://parva-backend-media-dev.s3.amazonaws.com/post_banners/tech.jpeg" />
+      </MetaTags>
+      {/* <Helmet>
         <meta charSet="utf-8" />
         <title>Editor</title>
-        <link rel="canonical" href="https://parva-backend-media-dev.s3.amazonaws.com/post_banners/tech.jpeg" />
-      </Helmet>
+        <link
+          rel="canonical"
+          href="https://parva-backend-media-dev.s3.amazonaws.com/post_banners/tech.jpeg"
+        />
+      </Helmet> */}
       <div className="w-100">
         <img className="banner-image" src={BannerImage} alt="banner_image" />
       </div>
@@ -88,7 +98,7 @@ const Home = ({
       </div>
       <div>
         <Container className="w-75 p-0">
-          <Link to={'/blog'}> Link to editor </Link>
+          <Link to={"/blog"}> Link to editor </Link>
           <div className="d-flex justify-content-center">
             <Products
               type="add"
