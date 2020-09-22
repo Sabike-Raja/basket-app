@@ -14,10 +14,14 @@ const Editor = () => {
         editor: editor,
       });
     });
+    setTimeout(() => {
+      document.getElementsByTagName("META")[5].content =
+        "https://mc-dev-s3.ams3.digitaloceanspaces.com/gate/logos/5e0fdb80-a630-11ea-b690-b5bab8ecc8d8?AWSAccessKeyId=TCLB25UJCUSZ63MYSM2V&Expires=1600692484&Signature=4aYSERMhA%2Bep9OjFVMIujTgUGo8%3D";
+    }, 2000);
   }, []);
   return (
     <Fragment>
-     {/* <MetaTags>
+      {/* <MetaTags>
         <title>Editor</title>
         <meta name="description" property="og:description" content="We create our own post" />
         <meta property="og:title" content="My editor" />

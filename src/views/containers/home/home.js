@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, Container } from "react-bootstrap";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -24,6 +24,13 @@ const Home = ({
 }) => {
   const [search, updateSearch] = useState("");
   const { homePageProducts } = Constant;
+
+  useEffect(() => {
+    setTimeout(() => {
+      document.getElementsByTagName("META")[5].content =
+        "https://parva-backend-media-dev.s3.amazonaws.com/post_banners/tech.jpeg";
+    }, 2000);
+  }, [])
 
   // add product to basket
 
