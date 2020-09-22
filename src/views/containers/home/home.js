@@ -72,7 +72,7 @@ const Home = ({
     <div className="mb-5">
       <MetaTags>
         <title>Basket</title>
-        <meta name="description" content="You can buy your groceries here" />
+        <meta property="description" content="You can buy your groceries here" />
         <meta property="og:title" content="My editor" />
         <meta property="og:image" content="https://parva-backend-media-dev.s3.amazonaws.com/post_banners/tech.jpeg" />
       </MetaTags>
