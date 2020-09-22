@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import React, { useEffect, Fragment } from "react";
 // import { Helmet } from "react-helmet";
-import MetaTags from "react-meta-tags";
+// import MetaTags from "react-meta-tags";
 
 require("medium-editor/dist/css/medium-editor.css");
 require("medium-editor/dist/css/themes/default.css");

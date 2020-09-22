@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 // import { Helmet } from "react-helmet";
-import MetaTags from "react-meta-tags";
+// import MetaTags from "react-meta-tags";
 
 import BannerImage from "../../../assets/images/grocery-shopping.png";
 import { Products } from "../../components/product/product";
