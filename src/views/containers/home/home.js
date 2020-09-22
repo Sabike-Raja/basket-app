@@ -26,11 +26,13 @@ const Home = ({
   const { homePageProducts } = Constant;
 
   useEffect(() => {
+    window.prerenderReady = false;
     fetch("https://run.mocky.io/v3/3f358af0-5e1e-4f57-bc0f-5aa204571cb0")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
         document.getElementsByTagName("META")[5].content = data.url;
+        window.prerenderReady = true
       });
     // setTimeout(() => {
     //   document.getElementsByTagName("META")[5].content =
